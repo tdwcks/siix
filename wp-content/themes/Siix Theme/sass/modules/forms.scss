@@ -4,7 +4,7 @@
 // =================================================================
 
 form {
-	padding-top: 10px;
+	padding-top: 30px;
 
 	.form-half {
 		width: calc(50% - 15px);
@@ -16,13 +16,14 @@ form {
 		}
 	}
 
-	input[type="text"], input[type="email"], input[type="submit"], textarea, button {
+	input[type="text"], input[type="email"], input[type="tel"], input[type="submit"], textarea, button {
 		width: 100%;
-		padding: 15px 15px;
+		padding: 10px 15px;
 		margin: 20px 0;
 		font-family: $base-font-family;
-		background: #EEF0F1;
+		background: lighten($colorBg, 10%);
 		border: 0;
+		color: #fff;
 		font-size: 0.9em;
 		box-sizing: border-box;
 		border-radius: 0;
@@ -33,23 +34,46 @@ form {
 		&:focus {
 			outline: 0;
 			border: 0;
-			background: darken(#EEF0F1, 5%);
+			background: lighten($colorBg, 15%);
 		}
 	}
 
+	p {
+		float: left;
+		@include calc(width, "50% - 13px");
+		padding: 0;
+		opacity: 1;
+	}
+
+	p:nth-child(even) {
+		float: right;
+	}
+
+	p:nth-child(6) {
+		width: 100%;
+	}
+
+	p:nth-child(7) {
+		padding: 0;
+		float: right;
+		width: 40%;
+	}
+
 	label {
-		color: $colorType;
+		color: #fff;
+		opacity: 0.8;
 	}
 
 	textarea {
-		resize: none;
+		resize: vertical;
+		width: 100%;
 	}
 
 	button {
 		width: intrinsic;
 		padding: 15px 30px;
 		max-width: 150px;
-		background: $colorType;
+		background: $colorOne;
 		cursor: pointer;
 		color: #fff;
 		float: right;
@@ -58,21 +82,50 @@ form {
 			background: darken($colorType, 10%);
 		}
 	}
-}
 
-#form-messages {
-	float: left;
-	display: block;
-	width: calc(100% - 100px);
-	margin-top: 20px;
-	color: $colorType;
-	line-height: 1.4;
-}
+	input[type="submit"] {
+		margin: 0;
+		background: $colorOne;
+	}
 
-#form-messages.error {
-	color: $colorOne;
-}
+	div.wpcf7-validation-errors {
+		border: none;
+		font-size: 0.9em;
+		display: block;
+		margin-top: 10px;
+		width: 240px;
+	}
 
-#form-messages.success {
-	color: #3FBC33;
+	strong.mc_error_msg {
+		padding: 10px 0;
+		font-size: 0.9em;
+		color: #FF5B34;
+		display: block;
+	}
+
+	div.wpcf7-response-output {
+		padding: 0;
+		margin: 0;
+		margin-top:  50px;
+		display: block;
+		color: #fff;
+		opacity: 0.8;
+		font-size: 0.9em;
+		line-height: 1.2em;
+	}
+
+	span {
+		font-size: 0.9em;
+		color: #FF5B34;
+		display: block;
+		padding-bottom: 5px;
+	}
+
+	.ajax-loader {
+		display: none;
+	}
+
+	span.wpcf7-not-valid-tip {
+		color: #FF5B34;
+	}
 }

@@ -3,3 +3,120 @@
 // 	Header
 // =================================================================
 
+header {
+	width: 20%;
+	background: $colorBg;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	.logo {
+		width: 190px;
+		margin-top: 25px;
+		margin-left: 25px;
+		height: auto;
+	}
+
+	a.menu-trigger {
+		display: none;
+		margin-top: 22px;
+		margin-right: 25px;
+		font-size: 1em;
+		float: right;
+		color: #fff;
+	}
+
+	nav {
+		margin-top: 35vh;
+
+		ul {
+			padding: 0;
+		}
+
+		ul li {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul li a {
+			font-size: 0.9em;
+			color: $colorOne;
+			display: block;
+			padding: 17px 20px 15px 20px;
+			border-top: 1px solid $colorLines;
+			color: #fff;
+			@include transition(all, 0.3s, ease-in-out);
+		}
+
+		ul li a:hover {
+			color: $colorOne;
+		}
+
+		ul li:last-child {
+			border-bottom: 1px solid $colorLines;
+		}
+	}
+
+	.social {
+		margin-top: 80px;
+
+		li {
+			float: left;
+			list-style-type: none;
+			padding-left: 25px;
+			
+			a {
+				color: #fff;
+			}
+
+			a:hover i {
+				color: $colorOne;
+			}
+		}
+	}
+
+	@include mq("small", "max-width") { 
+		width: 100%;
+		height: 60px;
+
+		a.menu-trigger {
+			display: block;
+		}
+
+		nav {
+			display: none;
+			margin-top: 0;
+			background: $colorBg;
+
+			ul li a {
+				font-size: 1em;
+			}
+		}
+
+		nav.active {
+			display: block;
+		}
+
+		.social {
+			margin-top: 0;
+			background: $colorBg;
+			height: auto;
+			overflow: auto;
+			padding: 12px 0;
+			width: 100%;
+			display: none;
+		}
+
+		.social.active {
+			display: block;
+		}
+
+		.logo {
+			margin-top: 15px;
+			margin-left: 15px;
+			width: 80px;
+		}
+	}
+}

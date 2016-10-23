@@ -164,7 +164,7 @@ $grid-spacing:2%;
 }
 
 .shift-2 {
-  @include calc(margin-left, "16.6667% + 4px");
+  @include calc(margin-left, "16.6667% + 0px");
 }
 
 .col-2 {

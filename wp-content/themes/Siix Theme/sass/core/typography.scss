@@ -9,16 +9,12 @@
 	$regular: 400;
 	$bold: 600;
 
-	$font-path: '/sass/fonts/' !default;
-
 // 		Font Face yeah
 // =================================================================
 
-	@include font-face(GT, sass/fonts/GT-Walsheim-Regular);
-
 // 		Base Font
 // =================================================================
-	$base-font-family: "GT", sans-serif;
+	$base-font-family: "NeuzeitGro-Reg", sans-serif;
 	$base-font-weight: $regular;
 	$base-line-height: 1.4;
 
@@ -69,8 +65,10 @@ h4 {
 
 h5 {
 	font-size: 1em;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 h5.underline {

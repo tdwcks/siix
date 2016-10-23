@@ -65,3 +65,4 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+add_filter('show_admin_bar', '__return_false');
