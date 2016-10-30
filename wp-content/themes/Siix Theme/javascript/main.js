@@ -10,6 +10,18 @@ $( ".menu-trigger" ).on( "click", function() {
  	$('.social').toggleClass('active');
 });
 
+// Exit
+$( ".exit" ).on( "click", function() {
+ 	$('.information').removeClass('active');
+});
+
+// Exit
+ $( ".trigger-info" ).on( "click", function() {
+ 	$('.information').toggleClass('active');
+ 	swiper.stopAutoplay();
+ 	event.preventDefault();
+});
+
 // Trigger Description
 $( ".slide-description h5" ).on( "click", function() {
  	$('.slide-description').toggleClass('active');

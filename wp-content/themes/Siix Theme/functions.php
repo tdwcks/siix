@@ -66,3 +66,15 @@ return $count;
 }
 }
 add_filter('show_admin_bar', '__return_false');
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+add_filter('upload_mimes', 'cc_mime_types');

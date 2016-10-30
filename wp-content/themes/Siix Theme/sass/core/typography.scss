@@ -9,17 +9,22 @@
 	$regular: 400;
 	$bold: 600;
 
+	$font-path: '/sass/fonts/' !default;
+
 // 		Font Face yeah
+// =================================================================
+
+	@include font-face(GT, sass/fonts/eurostileregular-webfont);
+	@include font-face(GTBold, sass/fonts/eurostile-bold-webfont);
+// 		Headings
 // =================================================================
 
 // 		Base Font
 // =================================================================
-	$base-font-family: "NeuzeitGro-Reg", sans-serif;
+	$base-font-family: "GT", sans-serif;
+	$bold-font-family: "GTBold", sans-serif;
 	$base-font-weight: $regular;
 	$base-line-height: 1.4;
-
-// 		Headings
-// =================================================================
 
 body {
 	font-family: $base-font-family;
@@ -69,6 +74,7 @@ h5 {
 	border-bottom: 1px solid #fff;
 	padding-bottom: 15px;
 	margin-bottom: 15px;
+	font-family: $base-font-family;
 }
 
 h5.underline {

@@ -4,7 +4,11 @@
 // =================================================================
 
 form {
-	padding-top: 30px;
+	padding-top: 7px;
+	padding-bottom: 25px;
+	height: auto;
+	display: block;
+	overflow: auto;
 
 	.form-half {
 		width: calc(50% - 15px);
@@ -16,10 +20,10 @@ form {
 		}
 	}
 
-	input[type="text"], input[type="email"], input[type="tel"], input[type="submit"], textarea, button {
+	input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="submit"], textarea, button {
 		width: 100%;
 		padding: 10px 15px;
-		margin: 20px 0;
+		margin: 10px 0;
 		font-family: $base-font-family;
 		background: lighten($colorBg, 10%);
 		border: 0;
@@ -37,6 +41,32 @@ form {
 			background: lighten($colorBg, 15%);
 		}
 	}
+
+	select {
+	  -moz-appearance: none;
+	  -webkit-appearance: none;
+	  appearance: none;
+	  border-radius: 0;
+	  box-sizing: border-box;
+	  width: 100%;
+	  background: #383838;
+	  border: 0;
+	  font-family: $base-font-family;
+	  color: #fff;
+	  padding: 10px 15px;
+	  position: relative;
+	  background-image: url(images/dropdown-arrows.svg);
+	  background-repeat: no-repeat;
+	  background-size: 25px 25px;
+	  font-size: 1em;
+	  margin: 10px 0;
+	  background-position: right center;
+
+	  &:focus {
+	    outline: 0;
+	  }
+	}
+
 
 	p {
 		float: left;
@@ -62,6 +92,7 @@ form {
 	label {
 		color: #fff;
 		opacity: 0.8;
+		font-size: 0.9em;
 	}
 
 	textarea {

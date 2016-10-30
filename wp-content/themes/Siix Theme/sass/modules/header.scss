@@ -5,7 +5,7 @@
 
 header {
 	width: 20%;
-	background: $colorBg;
+	background: darken($colorBg, 1%);
 	height: 100vh;
 	position: fixed;
 	top: 0;
@@ -13,9 +13,9 @@ header {
 	z-index: 10;
 
 	.logo {
-		width: 190px;
-		margin-top: 25px;
-		margin-left: 25px;
+		width: 200px;
+		display: block;
+		margin: 70px auto 0 auto;
 		height: auto;
 	}
 
@@ -23,13 +23,48 @@ header {
 		display: none;
 		margin-top: 22px;
 		margin-right: 25px;
-		font-size: 1em;
+		font-size: 0.9em;
 		float: right;
 		color: #fff;
 	}
 
+	.trigger-info {
+		margin-top: 80px;
+		position: relative;
+		height: auto;
+		padding: 25px;
+	}
+
+	.trigger-info p {
+		display: inline-block;
+		line-height: 1.5;
+		font-size: 0.9em;
+		opacity: 0.8;
+		color: #fff;
+		cursor: pointer;
+
+		.last-word:after {
+			background-image: url('images/info.svg');
+			background-size: 100% 100%; 
+		  	background-position: 0px 0px;
+		  	background-repeat: no-repeat;
+			content: '';
+			display:inline-block;
+			width: 25px;
+			height: 18px;
+			overflow: visible;
+		}
+
+		&:hover {
+
+			.last-word:after {
+				background-image: url('images/info-hover.svg');
+			}
+		}
+	}
+
 	nav {
-		margin-top: 35vh;
+		margin-top: 10vh;
 
 		ul {
 			padding: 0;
@@ -60,12 +95,19 @@ header {
 	}
 
 	.social {
+		width: 140px;
+		margin: 0 auto;
+		display: block;
 		margin-top: 80px;
-
+		
 		li {
 			float: left;
 			list-style-type: none;
 			padding-left: 25px;
+
+			&:first-child {
+				padding-left: 0;
+			}
 			
 			a {
 				color: #fff;
@@ -87,7 +129,7 @@ header {
 
 		nav {
 			display: none;
-			margin-top: 0;
+			margin-top: 10px;
 			background: $colorBg;
 
 			ul li a {
@@ -107,6 +149,10 @@ header {
 			padding: 12px 0;
 			width: 100%;
 			display: none;
+
+			li:first-child {
+				padding-left: 25px;
+			}
 		}
 
 		.social.active {
